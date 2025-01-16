@@ -67,11 +67,11 @@ const CreateInvoice = () => {
         setStatus("Creating invoice...");
 
         try {
-            if (!client || !bech32Address) {
+            if (!client, !bech32Address) {
                 throw new Error("Wallet not connected or client unavailable.");
             }
 
-            if (!payer || !description || !dueDate) {
+            if (!payer, !description || !dueDate) {
                 throw new Error("All fields are required.");
             }
             if (totalAmount <= 0) {
